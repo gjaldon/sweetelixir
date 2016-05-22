@@ -34,9 +34,9 @@ file_content
 
 **Bonus**
 ```elixir
-%w( gray, white )
+~w(gray white)
   |> Stream.cycle
-  |> Stream.zip(%w(Customer1 Customer2 Customer3 Customer 4)
+  |> Stream.zip(~w(Customer1 Customer2 Customer3 Customer 4)
   |> Stream.map( fn {color, value} ->
        %s{<tr class="#{color}"><td>#{value}</td></tr>}
      end)
